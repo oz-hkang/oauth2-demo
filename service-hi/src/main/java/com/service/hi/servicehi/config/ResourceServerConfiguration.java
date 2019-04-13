@@ -25,6 +25,6 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
    */
   @Override public void configure(HttpSecurity http) throws Exception {
     http.authorizeRequests().antMatchers("/order/**").authenticated().antMatchers("/scope/**/").access(
-      "#oauth2.hasScope('read')").antMatchers("/role/**/").access("#oauth2.hasRole('ROLE_USER')"); // 配置order访问控制，必须认证后才可以访问
+      "#oauth2.hasScope('read')").antMatchers("/role/**/").hasAuthority("USER"); // 配置order访问控制，必须认证后才可以访问
   }
 }
