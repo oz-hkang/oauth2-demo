@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8765
+spring:
+  application:
+    name: service-hi
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/oauth_demo?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+      username: root
+      password: Passw0rd
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:9098/users/current
+
+
