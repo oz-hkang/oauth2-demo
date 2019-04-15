@@ -11,6 +11,7 @@
     <modules>
         <module>discovery-service</module>
         <module>authentication-service</module>
+        <module>gateway-service</module>
         <module>demo-resource-service</module>
     </modules>
 
