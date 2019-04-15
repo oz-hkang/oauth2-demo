@@ -1,29 +1,21 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8765
 spring:
   application:
-    name: service-auth
-
+    name: service-hi
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://localhost:3306/auth2_db?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
       username: root
       password: Passw0rd
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:9098/users/current
 
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: true
-#
-#  redis:
-#    host: 172.16.10.43
-#    database: 1
-
-
-server:
-  port: 9098
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 
 logging.level.org.springframework.security: DEBUG
-

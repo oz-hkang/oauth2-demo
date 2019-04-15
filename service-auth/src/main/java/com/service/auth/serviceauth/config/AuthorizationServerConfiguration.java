@@ -74,7 +74,7 @@ import com.service.auth.serviceauth.dto.UserServiceDetail;
     // 配置tokenServices参数
     DefaultTokenServices tokenServices = new DefaultTokenServices();
     tokenServices.setTokenStore(endpoints.getTokenStore());
-    tokenServices.setSupportRefreshToken(false);
+    tokenServices.setSupportRefreshToken(true);
     tokenServices.setClientDetailsService(endpoints.getClientDetailsService());
     tokenServices.setTokenEnhancer(endpoints.getTokenEnhancer());
     tokenServices.setAccessTokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(30)); // 30天
