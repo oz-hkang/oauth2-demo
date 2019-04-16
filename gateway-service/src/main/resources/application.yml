@@ -3,6 +3,11 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      default-filters:
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback
       discovery:
         locator:
           lowerCaseServiceId: true

@@ -1,6 +1,8 @@
 package com.demo.resource.controller;
 
 import java.security.Principal;
+import java.util.concurrent.TimeUnit;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
@@ -95,4 +97,10 @@ import org.springframework.web.bind.annotation.*;
     return "Hello scope ";
   }
 
+
+  @GetMapping("/fusing")
+  public String testFusing() throws InterruptedException {
+    TimeUnit.SECONDS.sleep(10);
+    return "Hello fusing ";
+  }
 } // end class TestEndPointController
