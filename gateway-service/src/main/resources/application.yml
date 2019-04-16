@@ -8,6 +8,13 @@ spring:
           args:
             name: fallbackcmd
             fallbackUri: forward:/fallback
+      routes:
+        - id: demo-resource-service
+          uri: lb://demo-resource-service
+          predicates:
+            - Path=/demo/**
+          filters:
+            - StripPrefix=1
       discovery:
         locator:
           lowerCaseServiceId: true

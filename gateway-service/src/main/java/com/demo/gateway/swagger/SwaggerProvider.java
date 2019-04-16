@@ -1,4 +1,4 @@
-package com.demo.gateway.config;
+package com.demo.gateway.swagger;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
