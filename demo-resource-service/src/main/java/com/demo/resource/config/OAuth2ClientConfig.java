@@ -48,14 +48,14 @@ import feign.RequestInterceptor;
 // return new OAuth2FeignRequestInterceptor(new DefaultOAuth2ClientContext(), clientCredentialsResourceDetails());
 // }
 //
-  /**
-   * restTemplate.
-   *
-   * @return  RestTemplate
-   */
-  @Bean @LoadBalanced public RestTemplate restTemplate() {
-    return new RestTemplate();
-  }
+//  /**
+//   * restTemplate.
+//   *
+//   * @return  RestTemplate
+//   */
+//  @Bean @LoadBalanced public RestTemplate restTemplate() {
+//    return new RestTemplate();
+//  }
 
   //~ ------------------------------------------------------------------------------------------------------------------
 
@@ -64,13 +64,13 @@ import feign.RequestInterceptor;
    *
    * @return  ResourceServerTokenServices
    */
-  @Bean public ResourceServerTokenServices tokenService() {
-    RemoteTokenServices tokenServices = new RemoteTokenServices();
-    tokenServices.setRestTemplate(restTemplate());
-    tokenServices.setClientId("client_2");
-    tokenServices.setClientSecret("123456");
-    tokenServices.setCheckTokenEndpointUrl("http://authentication-service/oauth/check_token");
-
-    return tokenServices;
-  }
+//  @Bean public ResourceServerTokenServices tokenService() {
+//    RemoteTokenServices tokenServices = new RemoteTokenServices();
+//    tokenServices.setRestTemplate(restTemplate());
+//    tokenServices.setClientId("client_2");
+//    tokenServices.setClientSecret("123456");
+//    tokenServices.setCheckTokenEndpointUrl("http://authentication-service/oauth/check_token");
+//
+//    return tokenServices;
+//  }
 } // end class OAuth2ClientConfig
