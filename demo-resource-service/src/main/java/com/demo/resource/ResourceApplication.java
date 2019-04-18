@@ -1,5 +1,6 @@
 package com.demo.resource;
 
+import com.demo.config.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,6 +15,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @author   <a href="mailto:thomas.kang@hrx.ai">Thomas</a>
  * @version  04/13/2019 16:33
  */
+@EnableSwagger2Doc
 @EnableDiscoveryClient @EnableEurekaClient @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class ResourceApplication {
   //~ Methods ----------------------------------------------------------------------------------------------------------

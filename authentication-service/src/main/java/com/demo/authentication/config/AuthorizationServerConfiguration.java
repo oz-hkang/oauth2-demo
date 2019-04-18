@@ -94,7 +94,7 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
    * @see  org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter#configure(org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer)
    */
   @Override public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-    security.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
+    security.allowFormAuthenticationForClients().tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
   }
 
   //~ ------------------------------------------------------------------------------------------------------------------

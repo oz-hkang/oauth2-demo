@@ -6,7 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
 /**
@@ -15,7 +19,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * @author   <a href="mailto:thomas.kang@hrx.ai">Thomas</a>
  * @version  04/13/2019 16:33
  */
-@EnableDiscoveryClient @EnableEurekaClient @EnableResourceServer @SpringBootApplication public class AuthenticationApplication {
+@EnableDiscoveryClient @EnableEurekaClient @EnableResourceServer @SpringBootApplication
+public class AuthenticationApplication {
   //~ Methods ----------------------------------------------------------------------------------------------------------
 
   /**

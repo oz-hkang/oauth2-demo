@@ -21,4 +21,11 @@ public class UserController {
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>");
         return principal;
     }
+
+
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello( ) {
+        logger.info(">>>>>>>>>>>>>>>>>>>>>>>>");
+        return "world";
+    }
 }
